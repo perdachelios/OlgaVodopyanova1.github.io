@@ -1,0 +1,498 @@
+body{
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    margin-top: -10px; 
+    height: auto;
+}
+header{
+    height: 250px;
+}
+section{
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.logo-wrapper{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    z-index: 20;
+}
+.img-logo{
+    max-width: 240px;
+    height: auto;
+    padding-top: 10px;
+}
+.menu-wrapper{
+    background: #fff;
+    height: 45px;
+    width: 100%;
+    margin-top: 160px;
+    position: fixed;
+    z-index: 10;
+}
+#checkbox-menu,                    /*бургер скрыли*/
+.toggle {                           
+    display: none;
+}
+.ul-a{
+    list-style-type: none;
+    text-align: center;
+}
+.menu{
+    display: inline-block;
+    margin-right: 30px;
+}
+.menu-a{
+    font-family: 'Ovo', serif;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    list-style-type: disc;
+    text-decoration: none;
+}
+.menu-a:hover{
+    color: #bed1de;
+
+}
+/*.hr-1{
+    margin-top: 200px;
+    size: 8px;
+    width: 1200px;
+}*/
+
+/*==================CONTACT=========================*/
+
+.contact-wrapper{
+    /*width: 100%;*/
+    text-align: center;
+}
+.contact-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.contact-content{
+    width: 50%;
+    margin-right: 50px;
+
+}
+h4{
+    text-transform: uppercase;
+    font-weight: lighter !important;
+    text-align: center;
+    background-color: #bed1de;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 30px;
+    letter-spacing: 2px;
+
+}
+.contact-p{
+    color: #7a7a7a;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.contact-a{
+    color: #D2691E	;
+    text-decoration: none;
+    font-size: 16px;
+}
+.contact-a:hover{
+    color: #bed1de;
+    cursor: pointer;
+}
+.contact-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*text-align: center;*/
+    margin: 0 auto;
+    margin-top: 35px;
+    max-width: 800px;
+    max-height: 400px;
+}
+.contact-img-1{
+    max-width: 100%;
+    max-height: max-content;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+label{
+    color: #7a7a7a;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+.input[type="text"], .input[type="email"], .input[type="date"], .input[type="tel"]{
+    width: 100%;
+    height: auto;
+    background: none;
+    border: 1px solid #535353;
+    color: #7a7a7a;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.textarea{
+    width: 100%;
+    height: auto;
+    background: none;
+    border: 1px solid #535353;
+    color: #7a7a7a;
+    font-size: 17px;
+    resize: none;
+}
+.button{
+    text-align: center;
+    text-decoration: none;
+    background: #D2691E;
+    width: 150px;
+    height: 45px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 44px;   /*отобразить текст ссылки в середине кнопки*/
+    margin-left: 0;
+    margin-top: 20px;
+    border: none;
+}
+.button:hover{
+    background: #bed1de;
+}
+
+
+/*==================footer===========================*/
+
+hr{
+    margin-bottom: 0;
+    size: 8px;
+    width: 1200px;
+}
+.footer{
+    margin-top: 100px;
+    max-height: 150px;
+    background: #fff;
+}
+.contact-foot{
+    margin-top: 30px;
+}
+.soc-wrapper{
+    width: 100%;
+    text-align: center;
+}
+.soc{
+    color: #000;
+    font-size: 25px;
+    list-style-type: none;
+    margin-right: 30px;
+}
+.soc:hover{
+    color: #bed1de;
+}
+.foot-p-wrapper{
+    width: 100%;
+    text-align: center;
+}
+.foot-p{
+    font-family: 'Forum', cursive;
+    margin-top: 40px;
+    color: #000;
+    font-size: 22px;
+}
+
+
+/*=================АДАПТИВ=====================*/
+@media (max-width: 376px){
+    .logo-wrapper{
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        z-index: 20;
+    }
+    .img-logo{
+        max-width: 170px;
+        height: auto;
+        padding-top: 10px;
+    }
+    .menu-wrapper{
+        background: #fff;
+        height: 0;
+        width: 100%;
+        margin-top: 90px;
+        position: absolute;
+        z-index: 10;
+    }
+    .toggle{                     /*при условии что экран меньше 765рх появляется "мобильное меню"*/
+        clear: both;
+        display: block;      /*отображение представляем блоком, после чего выравниваем элементы в нем*/
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        width: 100%;
+        color: #000;
+        background: #fff;
+        transition: all .1s linear;
+    }
+    .toggle:hover{  /*фон при наведении*/
+        background: #bed1de;
+    }
+    #checkbox-menu:checked + label .touch li{ /*в инпут лейбл и ссылки изменяем*/
+        opacity: 1;    /*прозрачность*/
+        visibility: visible; /*отображение элементы, рамки и фона*/
+        transition: all .7s linear;  /* не понял пока*/
+    }
+    #checkbox-menu:checked + label .touch{
+        height: 300px;
+        background: #fff;
+    }
+    .ul-a{   /*меню в целом*/
+        margin-top: 20px;
+        margin-bottom: 0;
+        display: flex;  /*отображение помещаем в флекс контейр для выравнивания*/
+        flex-direction: column; /*в ряд по вертикали*/
+        justify-content: space-around; /*как брахузер распр.просторанство между и вокруг элементов/равномерно*/
+        align-items: center;
+        height: 0;
+        transition: height .3s linear;  /*не понял*/
+    }
+    .menu{  /*спичок помещаем в контейнер и выравниваем*/
+        margin-top: 0;;
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu-a{ /*ссылки из списка? помещаем в контейнер и выравниваем(т.к. не отобажается, не пойму для чего)*/
+        width: 95%;
+        font-size: 14px;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    .menu-li{
+        visibility: hidden;
+        font-size: 0;
+    }
+    .menu li a.contacts{ /*контактны выравниваем так как выше смещены в коде*/
+        margin-right: 0px;
+    }
+    .contact-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-content{
+        margin-left: 50px;
+    }
+    h4{
+        margin-top: -30px;
+    }
+    .contact-form{
+        margin-top: 20px;
+    }
+    hr{
+        margin-bottom: 0;
+        size: 8px;
+        width: 50px;
+    }
+    .contact-foot{
+        margin-top: 15px;
+        padding-top: 20px;
+    }
+    .soc{
+        font-size: 20px;
+        list-style-type: none;
+        margin-right: 25px;
+    }
+    .foot-p{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
+
+/*Экстрамалые девайсы («портретные телефоны», < 576px)*/
+@media (min-width: 377px) and (max-width: 575.98px) { 
+    .logo-wrapper{
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        z-index: 20;
+    }
+    .img-logo{
+        max-width: 170px;
+        height: auto;
+        padding-top: 10px;
+    }
+    .menu-wrapper{
+        background: #fff;
+        height: 0;
+        width: 100%;
+        margin-top: 90px;
+        position: absolute;
+        z-index: 10;
+    }
+    .toggle{                     /*при условии что экран меньше 765рх появляется "мобильное меню"*/
+        clear: both;
+        display: block;      /*отображение представляем блоком, после чего выравниваем элементы в нем*/
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        width: 100%;
+        color: #000;
+        background: #fff;
+        transition: all .1s linear;
+    }
+    .toggle:hover{  /*фон при наведении*/
+        background: #bed1de;
+    }
+    #checkbox-menu:checked + label .touch li{ /*в инпут лейбл и ссылки изменяем*/
+        opacity: 1;    /*прозрачность*/
+        visibility: visible; /*отображение элементы, рамки и фона*/
+        transition: all .7s linear;  /* не понял пока*/
+    }
+    #checkbox-menu:checked + label .touch{
+        height: 300px;
+        background: #fff;
+    }
+    .ul-a{   /*меню в целом*/
+        margin-top: 20px;
+        margin-bottom: 0;
+        display: flex;  /*отображение помещаем в флекс контейр для выравнивания*/
+        flex-direction: column; /*в ряд по вертикали*/
+        justify-content: space-around; /*как брахузер распр.просторанство между и вокруг элементов/равномерно*/
+        align-items: center;
+        height: 0;
+        transition: height .3s linear;  /*не понял*/
+    }
+    .menu{  /*спичок помещаем в контейнер и выравниваем*/
+        margin-top: 0;;
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu-a{ /*ссылки из списка? помещаем в контейнер и выравниваем(т.к. не отобажается, не пойму для чего)*/
+        width: 95%;
+        font-size: 14px;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    .menu-li{
+        visibility: hidden;
+        font-size: 0;
+    }
+    .menu li a.contacts{ /*контактны выравниваем так как выше смещены в коде*/
+        margin-right: 0px;
+    }
+    .contact-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-content{
+        margin-left: 50px;
+    }
+    h4{
+        margin-top: -30px;
+    }
+    .contact-form{
+        margin-top: 20px;
+    }
+    hr{
+        margin-bottom: 0;
+        size: 8px;
+        width: 300px;
+    }
+    .contact-foot{
+        margin-top: 15px;
+        padding-top: 20px;
+    }
+    .soc{
+        font-size: 20px;
+        list-style-type: none;
+        margin-right: 25px;
+    }
+    .foot-p{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+ }
+
+/*Малые девайсы («ландшафтные», >= 575px)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .img-logo{
+        max-width: 150px;
+        height: auto;
+        padding-top: 10px;
+    }
+    .menu-wrapper{
+        height: 40px;
+        margin-top: 105px;
+    }
+    .menu-a{
+        font-size: 16px;
+    }
+    h4{
+        margin-top: 0px;
+    }
+    hr{
+        margin-bottom: 0;
+        size: 8px;
+        width: 400px;
+    }
+    .contact-foot{
+        margin-top: 15px;
+        padding-top: 20px;
+    }
+    .soc{
+        font-size: 20px;
+        list-style-type: none;
+        margin-right: 25px;
+    }
+    .foot-p{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+ }
+
+/*Средние девайсы («таблетки», >= 768px)*/ 
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    h4{
+        margin-top: 0px;
+    }
+    hr{
+        margin-bottom: 0;
+        size: 8px;
+        width: 600px;
+    }
+ }
+
+/*Большие девайсы (большие десктопы, >= 992px)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    h4{
+        margin-top: 20px;
+    }
+    hr{
+        margin-bottom: 0;
+        size: 8px;
+        width: 990px;
+    }
+}
+
+
+/*Большие девайсы (большие десктопы, >= 1200px)*/
+@media (min-width: 1200px) and (max-width: 1409.98px){ ... }
